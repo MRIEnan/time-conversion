@@ -1,10 +1,10 @@
 // const inputTime='11:30:45PM';
 // const inputTime='12:01:00PM';
-// const inputTime='12:01:00AM';
+const inputTime='12:01:15AM';
 // const inputTime='12:30:30AM';
 // const inputTime='12:30:00PM';
 // const inputTime='01:40:00PM';
-const inputTime='01:40:00AM';
+// const inputTime='01:40:00AM';
 // const inputTime='11:00:00PM';
 // const inputTime='11:14:00AM';
 // const inputTime='11:15:00AM';
@@ -24,6 +24,7 @@ let newSecond;
 
 console.log(typeof(parseInt(hour)),minute,second)
 
+// adding 45 minute and 45 second with the time
 if(parseInt(second)>=15){
     console.log('inside second')
     second=(parseInt(second)+45)-60;
@@ -84,6 +85,7 @@ console.log('-----------------------------------')
 console.log(`--------changed ${hour}:${minute}:${second}${day}----------`)
 console.log('-----------------------------------')
 
+// converting the time to military time
 if(day=='PM' && hour<=12){
     console.log('ok it is PM')
     if(hour == 12){
@@ -122,6 +124,8 @@ if(day=='AM' && hour<=12){
 }
 
 console.log(newHour,newMinute,newSecond)
+
+// formatting the time 
 if(`${newHour}`.length<2){
     newHour='0'+newHour
     console.log('updating, newHour')
